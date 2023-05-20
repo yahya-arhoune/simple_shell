@@ -1,16 +1,5 @@
 #include "shell.h"
 
-/**
- * print_error - prints an error message
- * @info: the parameter & return info struct
- * @msg: the error message to print
- *
- * Return: void
- */
-void print_error(info_t *info, const char *msg)
-{
-	fprintf(stderr, "%s: %s", info->argv[0], msg);
-}
 
 /**
  * hsh - main shell loop

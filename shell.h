@@ -95,7 +95,8 @@ typedef struct passinfo
 	int histcount;
 } info_t;
 
-#define INFO_INIT
+
+#define INFO_INIT {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, 0}
 
 /**
  * struct builtin - struct that contains a builtin string and related function.
@@ -124,7 +125,7 @@ char *find_path(info_t *, char *, char *);
 int loophsh(char **);
 
 
-void _eputs(char *);
+void _eputs(const char *);
 int _eputchar(char);
 int _putfd(char c, int fd);
 int _putsfd(char *str, int fd);
@@ -166,7 +167,7 @@ int _atoi(char *);
 
 
 int _erratoi(char *);
-void print_error(info_t *, char *);
+void print_error(info_t *, const char *);
 int print_d(int, int);
 char *convert_number(long int, int, int);
 void remove_comments(char *);
